@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mister Act Ticket Sales March 21, 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'DM Sans', sans-serif; background: #faf9f6; color: #2c2c2a; padding: 2rem 1.5rem; max-width: 860px; margin: 0 auto; }
+h1 { font-family: 'Fraunces', serif; font-size: 1.75rem; font-weight: 700; color: #1a1a18; margin-bottom: .25rem; }
+.subtitle { font-size: .85rem; color: #888780; margin-bottom: 2rem; }
+.metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-bottom: 2rem; }
+.metric { background: #fff; border: 1px solid #e8e6e0; border-radius: 10px; padding: 1rem; }
+.metric-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: #888780; margin-bottom: 4px; }
+.metric-value { font-size: 1.5rem; font-weight: 600; color: #1a1a18; }
+.metric-value span { font-size: .8rem; font-weight: 400; color: #888780; }
+.section-title { font-size: .95rem; font-weight: 600; margin-bottom: 1rem; color: #1a1a18; }
+.chart-wrap { background: #fff; border: 1px solid #e8e6e0; border-radius: 10px; padding: 1.25rem; margin-bottom: 1.5rem; }
+.chart-container { position: relative; width: 100%; height: 300px; }
+.legend { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 10px; font-size: .75rem; color: #888780; }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+.cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin-bottom: 2rem; }
+.card { background: #fff; border: 1px solid #e8e6e0; border-radius: 10px; padding: 1rem 1.15rem; position: relative; }
+.card-date { font-size: .75rem; color: #888780; }
+.card-pct { font-size: 1.35rem; font-weight: 600; margin: 4px 0 2px; }
+.card-detail { font-size: .75rem; color: #888780; }
+.card-vip { font-size: .7rem; color: #3266ad; margin-top: 4px; }
+.card-change { position: absolute; top: 1rem; right: 1rem; font-size: .7rem; font-weight: 500; padding: 2px 8px; border-radius: 20px; }
+.change-up { background: #eaf3de; color: #3b6d11; }
+.change-flat { background: #fcebeb; color: #a32d2d; }
+.card-alert { border-color: #e24b4a; border-width: 2px; }
+.card-alert .card-pct { color: #a32d2d; }
+.card-strong .card-pct { color: #0f6e56; }
+.footer { font-size: .75rem; color: #b4b2a9; text-align: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e8e6e0; }
+@media(max-width:600px) { .metrics { grid-template-columns: repeat(2,1fr); } .cards { grid-template-columns: 1fr; } .chart-container { height: 240px; } }
+</style>
+</head>
+<body>
+<h1>Mister Act Ticket Sales</h1>
+<p class="subtitle">Report date: March 21, 2026 &nbsp;&nbsp; Data window: Feb 16 &ndash; Mar 21 &nbsp;&nbsp; Source: Vivenup</p>
+<div class="metrics">
+  <div class="metric"><div class="metric-label">Total sold</div><div class="metric-value">536 <span>of 840</span></div></div>
+  <div class="metric"><div class="metric-label">Run capacity</div><div class="metric-value">63.8%</div></div>
+  <div class="metric"><div class="metric-label">Days to opening</div><div class="metric-value">20</div></div>
+  <div class="metric"><div class="metric-label">VIP total</div><div class="metric-value">134 <span>sold</span></div></div>
+</div>
+<div class="chart-wrap">
+  <p class="section-title">Tickets sold vs. remaining by performance</p>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:#3266ad"></span>GA sold</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#85B7EB"></span>VIP sold</span>
+    <span class="legend-item"><span class="legend-dot" style="background:#e8e6e0"></span>Remaining</span>
+  </div>
+  <div class="chart-container"><canvas id="salesChart"></canvas></div>
+</div>
+<div class="chart-wrap">
+  <p class="section-title">Sales velocity across reporting dates</p>
+  <div class="chart-container"><canvas id="velocityChart"></canvas></div>
+</div>
+<p class="section-title">Per-night breakdown</p>
+<div class="cards">
+  <div class="card"><span class="card-change change-up">+2</span><p class="card-date">Apr 10 &mdash; Opening</p><p class="card-pct">65.7%</p><p class="card-detail">92 sold, 48 remaining</p><p class="card-vip">VIP 30</p></div>
+  <div class="card card-strong"><span class="card-change change-up">+7</span><p class="card-date">Apr 11</p><p class="card-pct">86.4%</p><p class="card-detail">121 sold, 19 remaining</p><p class="card-vip">VIP 30</p></div>
+  <div class="card"><span class="card-change change-up">+2</span><p class="card-date">Apr 12</p><p class="card-pct">60.7%</p><p class="card-detail">85 sold, 55 remaining</p><p class="card-vip">VIP 8</p></div>
+  <div class="card card-alert"><span class="card-change change-up">+3</span><p class="card-date">Apr 16</p><p class="card-pct">29.3%</p><p class="card-detail">41 sold, 99 remaining</p><p class="card-vip">VIP 9 &mdash; VIP tripled since Mar 18</p></div>
+  <div class="card"><span class="card-change change-up">+6</span><p class="card-date">Apr 17</p><p class="card-pct">57.1%</p><p class="card-detail">80 sold, 60 remaining</p><p class="card-vip">VIP 22</p></div>
+  <div class="card card-strong"><span class="card-change change-flat" style="background:#f1efe8;color:#888780">0</span><p class="card-date">Apr 18 &mdash; Closing</p><p class="card-pct">83.6%</p><p class="card-detail">117 sold, 23 remaining</p><p class="card-vip">VIP 35</p></div>
+</div>
+<div class="chart-wrap">
+  <p class="section-title">VIP distribution by night</p>
+  <div class="chart-container" style="height:220px"><canvas id="vipChart"></canvas></div>
+</div>
+<p class="footer">Friends of Georges &mdash; Mister Act Campaign &mdash; Prepared by New Urban Media</p>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
+const gaSold = [62,91,77,32,58,82];
+const vipSold = [30,30,8,9,22,35];
+const remaining = [48,19,55,99,60,23];
+const gridColor = 'rgba(0,0,0,0.04)';
+const textColor = '#888780';
+new Chart(document.getElementById('salesChart'), {
+  type: 'bar',
+  data: { labels, datasets: [
+    { label:'GA sold', data:gaSold, backgroundColor:'#3266ad', borderRadius:3 },
+    { label:'VIP sold', data:vipSold, backgroundColor:'#85B7EB', borderRadius:3 },
+    { label:'Remaining', data:remaining, backgroundColor:'#e8e6e0', borderRadius:3 }
+  ]},
+  options: { responsive:true, maintainAspectRatio:false,
+    plugins: { legend:{display:false}, tooltip:{ callbacks:{ afterBody(ctx){ const i=ctx[0].dataIndex; const total=gaSold[i]+vipSold[i]; return `Total sold: ${total} of 140 (${Math.round(total/140*100)}%)`; } } } },
+    scales: {
+      x:{stacked:true, grid:{display:false}, ticks:{color:textColor,font:{size:12,family:'DM Sans'}}},
+      y:{stacked:true, max:140, grid:{color:gridColor}, ticks:{color:textColor,font:{size:11,family:'DM Sans'}}, title:{display:true,text:'Tickets',color:textColor,font:{size:11,family:'DM Sans'}}}
+    }
+  }
+});
+const mar11=[36,47,22,15,32,59];
+const mar16=[87,106,72,32,59,103];
+const mar18=[90,114,79,32,68,103];
+const mar20=[90,114,83,38,74,117];
+const mar21=[92,121,85,41,80,117];
+const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
+new Chart(document.getElementById('velocityChart'), {
+  type: 'line',
+  data: { labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21'],
+    datasets: labels.map((l,i)=>({ label:l, data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i]], borderColor:lineColors[i], backgroundColor:lineColors[i], pointRadius:5, pointHoverRadius:7, tension:0.3, borderWidth:2.5, borderDash:i===3?[6,3]:[] }))
+  },
+  options: { responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:true,labels:{usePointStyle:true,pointStyle:'circle',boxWidth:6,font:{size:11,family:'DM Sans'},color:textColor}} },
+    scales:{
+      x:{grid:{display:false},ticks:{color:textColor,font:{size:12,family:'DM Sans'}}},
+      y:{max:140,grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'Tickets sold',color:textColor,font:{size:11,family:'DM Sans'}}}
+    }
+  }
+});
+new Chart(document.getElementById('vipChart'), {
+  type: 'bar',
+  data: { labels, datasets:[{ label:'VIP tickets sold', data:vipSold, backgroundColor:labels.map((_,i)=>i===3?'#F09595':'#85B7EB'), borderRadius:3, barPercentage:0.6 }] },
+  options: { responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{
+      x:{grid:{display:false},ticks:{color:textColor,font:{size:12,family:'DM Sans'}}},
+      y:{grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'VIP tickets',color:textColor,font:{size:11,family:'DM Sans'}}}
+    }
+  }
+});
+</script>
+</body>
+</html>
