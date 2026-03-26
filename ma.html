@@ -44,16 +44,16 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <body>
 
 <h1>Mister Act — Ticket Sales</h1>
-<p class="subtitle">Report date: March 26, 2026 &nbsp;|&nbsp; Data window: Feb 16 – Mar 26 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
+<p class="subtitle">Report date: March 26, 2026 (evening) &nbsp;|&nbsp; Data window: Feb 1 – Mar 26 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
 
 <div class="metrics">
   <div class="metric">
     <div class="metric-label">Total sold</div>
-    <div class="metric-value">615 <span>of 840</span></div>
+    <div class="metric-value">638 <span>of 840</span></div>
   </div>
   <div class="metric">
     <div class="metric-label">Run capacity</div>
-    <div class="metric-value">73.2%</div>
+    <div class="metric-value">76.0%</div>
   </div>
   <div class="metric">
     <div class="metric-label">Days to opening</div>
@@ -83,46 +83,46 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <p class="section-title">Per-night breakdown</p>
 <div class="cards">
   <div class="card">
-    <span class="card-change change-up">+8</span>
+    <span class="card-change change-up">+16</span>
     <p class="card-date">Apr 10 (Opening)</p>
-    <p class="card-pct">70.0%</p>
-    <p class="card-detail">98 sold, 42 remaining</p>
+    <p class="card-pct">75.7%</p>
+    <p class="card-detail">106 sold, 34 remaining</p>
     <p class="card-vip">VIP: 30</p>
   </div>
   <div class="card card-strong">
-    <span class="card-change change-up">+12</span>
+    <span class="card-change change-up">+13</span>
     <p class="card-date">Apr 11</p>
-    <p class="card-pct">90.0%</p>
-    <p class="card-detail">126 sold, 14 remaining</p>
+    <p class="card-pct">90.7%</p>
+    <p class="card-detail">127 sold, 13 remaining</p>
     <p class="card-vip">VIP: 30</p>
   </div>
   <div class="card">
-    <span class="card-change change-up">+15</span>
+    <span class="card-change change-up">+17</span>
     <p class="card-date">Apr 12</p>
-    <p class="card-pct">67.1%</p>
-    <p class="card-detail">94 sold, 46 remaining</p>
+    <p class="card-pct">68.6%</p>
+    <p class="card-detail">96 sold, 44 remaining</p>
     <p class="card-vip">VIP: 8</p>
   </div>
   <div class="card card-alert">
-    <span class="card-change change-up">+24</span>
+    <span class="card-change change-up">+28</span>
     <p class="card-date">Apr 16</p>
-    <p class="card-pct">40.0%</p>
-    <p class="card-detail">56 sold, 84 remaining</p>
+    <p class="card-pct">42.9%</p>
+    <p class="card-detail">60 sold, 80 remaining</p>
     <p class="card-vip">VIP: 9 — Up from 3 on Mar 18</p>
   </div>
   <div class="card">
-    <span class="card-change change-up">+36</span>
+    <span class="card-change change-up">+41</span>
     <p class="card-date">Apr 17</p>
-    <p class="card-pct">74.3%</p>
-    <p class="card-detail">104 sold, 36 remaining</p>
+    <p class="card-pct">77.9%</p>
+    <p class="card-detail">109 sold, 31 remaining</p>
     <p class="card-vip">VIP: 23</p>
   </div>
-  <div class="card card-strong">
-    <span class="card-change change-up">+34</span>
-    <p class="card-date">Apr 18 (Closing)</p>
-    <p class="card-pct">97.9%</p>
-    <p class="card-detail">137 sold, 3 remaining</p>
-    <p class="card-vip">VIP: 35</p>
+  <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
+    <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
+    <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 18 (Closing)</p>
+    <p class="card-pct" style="color:#fff;">100%</p>
+    <p class="card-detail" style="color:rgba(255,255,255,0.7);">140 sold, 0 remaining</p>
+    <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 35</p>
   </div>
 </div>
 
@@ -136,9 +136,9 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
-const gaSold = [68, 96, 86, 47, 81, 102];
+const gaSold = [76, 97, 88, 51, 86, 105];
 const vipSold = [30, 30, 8, 9, 23, 35];
-const remaining = [42, 14, 46, 84, 36, 3];
+const remaining = [34, 13, 44, 80, 31, 0];
 const gridColor = 'rgba(0,0,0,0.04)';
 const textColor = '#888780';
 
@@ -182,7 +182,7 @@ const mar22=[94,122,86,47,86,127];
 const mar23=[96,122,88,54,96,131];
 const mar24=[97,122,88,54,96,137];
 const mar25=[97,122,91,56,97,137];
-const mar26=[98,126,94,56,104,137];
+const mar26=[106,127,96,60,109,140];
 const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
 
 new Chart(document.getElementById('velocityChart'), {
