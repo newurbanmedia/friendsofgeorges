@@ -49,19 +49,19 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <div class="metrics">
   <div class="metric">
     <div class="metric-label">Total sold</div>
-    <div class="metric-value">643 <span>of 840</span></div>
+    <div class="metric-value">658 <span>of 840</span></div>
   </div>
   <div class="metric">
     <div class="metric-label">Run capacity</div>
-    <div class="metric-value">76.5%</div>
+    <div class="metric-value">78.3%</div>
   </div>
   <div class="metric">
     <div class="metric-label">Days to opening</div>
-    <div class="metric-value">15</div>
+    <div class="metric-value">14</div>
   </div>
   <div class="metric">
     <div class="metric-label">VIP total</div>
-    <div class="metric-value">135 <span>sold</span></div>
+    <div class="metric-value">138 <span>sold</span></div>
   </div>
 </div>
 
@@ -83,24 +83,24 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <p class="section-title">Per-night breakdown</p>
 <div class="cards">
   <div class="card">
-    <span class="card-change change-up">+16</span>
+    <span class="card-change change-up">+19</span>
     <p class="card-date">Apr 10 (Opening)</p>
-    <p class="card-pct">75.7%</p>
-    <p class="card-detail">106 sold, 34 remaining</p>
+    <p class="card-pct">77.9%</p>
+    <p class="card-detail">109 sold, 31 remaining</p>
     <p class="card-vip">VIP: 30</p>
   </div>
   <div class="card card-strong">
-    <span class="card-change change-up">+13</span>
+    <span class="card-change change-up">+14</span>
     <p class="card-date">Apr 11</p>
-    <p class="card-pct">90.7%</p>
-    <p class="card-detail">127 sold, 13 remaining</p>
-    <p class="card-vip">VIP: 30</p>
+    <p class="card-pct">91.4%</p>
+    <p class="card-detail">128 sold, 12 remaining</p>
+    <p class="card-vip">VIP: 28</p>
   </div>
   <div class="card">
-    <span class="card-change change-up">+17</span>
+    <span class="card-change change-up">+16</span>
     <p class="card-date">Apr 12</p>
-    <p class="card-pct">68.6%</p>
-    <p class="card-detail">96 sold, 44 remaining</p>
+    <p class="card-pct">67.9%</p>
+    <p class="card-detail">95 sold, 45 remaining</p>
     <p class="card-vip">VIP: 8</p>
   </div>
   <div class="card card-alert">
@@ -110,12 +110,12 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
     <p class="card-detail">60 sold, 80 remaining</p>
     <p class="card-vip">VIP: 9 — Up from 3 on Mar 18</p>
   </div>
-  <div class="card">
-    <span class="card-change change-up">+41</span>
+  <div class="card card-strong">
+    <span class="card-change change-up">+58</span>
     <p class="card-date">Apr 17</p>
-    <p class="card-pct">77.9%</p>
-    <p class="card-detail">109 sold, 31 remaining</p>
-    <p class="card-vip">VIP: 23</p>
+    <p class="card-pct">90.0%</p>
+    <p class="card-detail">126 sold, 14 remaining</p>
+    <p class="card-vip">VIP: 28 — Up from 20 on Mar 18</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
@@ -136,9 +136,9 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
-const gaSold = [76, 97, 88, 51, 86, 105];
-const vipSold = [30, 30, 8, 9, 23, 35];
-const remaining = [34, 13, 44, 80, 31, 0];
+const gaSold = [79, 100, 87, 51, 98, 105];
+const vipSold = [30, 28, 8, 9, 28, 35];
+const remaining = [31, 12, 45, 80, 14, 0];
 const gridColor = 'rgba(0,0,0,0.04)';
 const textColor = '#888780';
 
@@ -183,15 +183,16 @@ const mar23=[96,122,88,54,96,131];
 const mar24=[97,122,88,54,96,137];
 const mar25=[97,122,91,56,97,137];
 const mar26=[106,127,96,60,109,140];
+const mar27=[109,128,95,60,126,140];
 const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
 
 new Chart(document.getElementById('velocityChart'), {
   type:'line',
   data:{
-    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26'],
+    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26','Mar 27'],
     datasets: labels.map((l,i)=>({
       label:l,
-      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i]],
+      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i],mar27[i]],
       borderColor:lineColors[i],
       backgroundColor:lineColors[i],
       pointRadius:5,
