@@ -44,16 +44,16 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <body>
 
 <h1>Mister Act — Ticket Sales</h1>
-<p class="subtitle">Report date: March 31, 2026 &nbsp;|&nbsp; Data window: Feb 16 – Mar 31 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
+<p class="subtitle">Report date: March 31, 2026 (evening) &nbsp;|&nbsp; Data window: Feb 16 – Mar 31 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
 
 <div class="metrics">
   <div class="metric">
     <div class="metric-label">Total sold</div>
-    <div class="metric-value">719 <span>of 840</span></div>
+    <div class="metric-value">726 <span>of 840</span></div>
   </div>
   <div class="metric">
     <div class="metric-label">Run capacity</div>
-    <div class="metric-value">85.6%</div>
+    <div class="metric-value">86.4%</div>
   </div>
   <div class="metric">
     <div class="metric-label">Days to opening</div>
@@ -61,7 +61,7 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
   </div>
   <div class="metric">
     <div class="metric-label">VIP total</div>
-    <div class="metric-value">147 <span>sold</span></div>
+    <div class="metric-value">149 <span>sold</span></div>
   </div>
 </div>
 
@@ -97,17 +97,17 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 31</p>
   </div>
   <div class="card">
-    <span class="card-change change-up">+23</span>
+    <span class="card-change change-up">+27</span>
     <p class="card-date">Apr 12</p>
-    <p class="card-pct">72.9%</p>
-    <p class="card-detail">102 sold, 38 remaining</p>
-    <p class="card-vip">VIP: 8</p>
+    <p class="card-pct">75.7%</p>
+    <p class="card-detail">106 sold, 34 remaining</p>
+    <p class="card-vip">VIP: 10</p>
   </div>
   <div class="card card-alert">
-    <span class="card-change change-up">+34</span>
+    <span class="card-change change-up">+37</span>
     <p class="card-date">Apr 16</p>
-    <p class="card-pct">47.1%</p>
-    <p class="card-detail">66 sold, 74 remaining</p>
+    <p class="card-pct">49.3%</p>
+    <p class="card-detail">69 sold, 71 remaining</p>
     <p class="card-vip">VIP: 13 — Up from 3 on Mar 18</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
@@ -136,9 +136,9 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
-const gaSold = [100, 110, 94, 53, 110, 105];
-const vipSold = [30, 31, 8, 13, 30, 35];
-const remaining = [10, 0, 38, 74, 0, 0];
+const gaSold = [100, 110, 96, 56, 110, 105];
+const vipSold = [30, 31, 10, 13, 30, 35];
+const remaining = [10, 0, 34, 71, 0, 0];
 const gridColor = 'rgba(0,0,0,0.04)';
 const textColor = '#888780';
 
@@ -186,7 +186,7 @@ const mar26=[106,127,96,60,109,140];
 const mar27=[113,133,99,62,131,140];
 const mar29=[124,136,101,63,132,140];
 const mar30=[127,141,101,64,139,140];
-const mar31=[130,141,102,66,140,140];
+const mar31=[130,141,106,69,140,140];
 const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
 
 new Chart(document.getElementById('velocityChart'), {
