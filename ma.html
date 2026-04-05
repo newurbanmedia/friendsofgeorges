@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mister Act Ticket Sales — April 3, 2026</title>
+<title>Mister Act Ticket Sales — April 4, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -44,24 +44,24 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <body>
 
 <h1>Mister Act — Ticket Sales</h1>
-<p class="subtitle">Report date: April 3, 2026 (evening) &nbsp;|&nbsp; Data window: Feb 16 – Apr 3 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
+<p class="subtitle">Report date: April 4, 2026 &nbsp;|&nbsp; Data window: Feb 16 – Apr 4 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
 
 <div class="metrics">
   <div class="metric">
     <div class="metric-label">Total sold</div>
-    <div class="metric-value">772 <span>of 840</span></div>
+    <div class="metric-value">792 <span>of 840</span></div>
   </div>
   <div class="metric">
     <div class="metric-label">Run capacity</div>
-    <div class="metric-value">91.9%</div>
+    <div class="metric-value">94.3%</div>
   </div>
   <div class="metric">
     <div class="metric-label">Days to opening</div>
-    <div class="metric-value">7</div>
+    <div class="metric-value">6</div>
   </div>
   <div class="metric">
     <div class="metric-label">VIP total</div>
-    <div class="metric-value">156 <span>sold</span></div>
+    <div class="metric-value">158 <span>sold</span></div>
   </div>
 </div>
 
@@ -97,18 +97,18 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 31</p>
   </div>
   <div class="card card-strong">
-    <span class="card-change change-up">+44</span>
+    <span class="card-change change-up">+48</span>
     <p class="card-date">Apr 12</p>
-    <p class="card-pct">87.9%</p>
-    <p class="card-detail">123 sold, 17 remaining</p>
+    <p class="card-pct">90.7%</p>
+    <p class="card-detail">127 sold, 13 remaining</p>
     <p class="card-vip">VIP: 15</p>
   </div>
-  <div class="card card-alert">
-    <span class="card-change change-up">+55</span>
+  <div class="card">
+    <span class="card-change change-up">+66</span>
     <p class="card-date">Apr 16</p>
-    <p class="card-pct">62.1%</p>
-    <p class="card-detail">87 sold, 53 remaining</p>
-    <p class="card-vip">VIP: 15 — Up from 3 on Mar 18</p>
+    <p class="card-pct">70.0%</p>
+    <p class="card-detail">98 sold, 42 remaining</p>
+    <p class="card-vip">VIP: 15</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
@@ -136,9 +136,9 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
 const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
-const gaSold = [110, 110, 108, 72, 111, 105];
-const vipSold = [30, 31, 15, 15, 30, 35];
-const remaining = [0, 0, 17, 53, 0, 0];
+const gaSold = [112, 111, 112, 83, 111, 105];
+const vipSold = [30, 31, 15, 15, 30, 37];
+const remaining = [0, 0, 13, 42, 0, 0];
 const gridColor = 'rgba(0,0,0,0.04)';
 const textColor = '#888780';
 
@@ -190,15 +190,16 @@ const mar31=[130,141,106,69,140,140];
 const apr01=[139,141,110,71,140,140];
 const apr02=[140,141,116,76,142,140];
 const apr03=[140,141,123,87,141,140];
+const apr04=[142,142,127,98,141,142];
 const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
 
 new Chart(document.getElementById('velocityChart'), {
   type:'line',
   data:{
-    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26','Mar 27','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3'],
+    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26','Mar 27','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3','Apr 4'],
     datasets: labels.map((l,i)=>({
       label:l,
-      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i],mar27[i],mar29[i],mar30[i],mar31[i],apr01[i],apr02[i],apr03[i]],
+      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i],mar27[i],mar29[i],mar30[i],mar31[i],apr01[i],apr02[i],apr03[i],apr04[i]],
       borderColor:lineColors[i],
       backgroundColor:lineColors[i],
       pointRadius:5,
