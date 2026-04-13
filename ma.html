@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mister Act Ticket Sales — April 7, 2026</title>
+<title>Mister Act Ticket Sales — April 13, 2026</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -44,20 +44,20 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <body>
 
 <h1>Mister Act — Ticket Sales</h1>
-<p class="subtitle">Report date: April 7, 2026 &nbsp;|&nbsp; Data window: Feb 16 – Apr 7 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Change badges vs. Mar 18</p>
+<p class="subtitle">Report date: April 13, 2026 &nbsp;|&nbsp; Data window: Feb 16 – Apr 13 &nbsp;|&nbsp; Source: Vivenu &nbsp;|&nbsp; Official capacity: 137 per night (up to 8 folding chairs for overflow)</p>
 
 <div class="metrics">
   <div class="metric">
     <div class="metric-label">Total sold</div>
-    <div class="metric-value">831 <span>of 840</span></div>
+    <div class="metric-value">853 <span>of 822</span></div>
   </div>
   <div class="metric">
-    <div class="metric-label">Run capacity</div>
-    <div class="metric-value">98.9%</div>
+    <div class="metric-label">Run status</div>
+    <div class="metric-value" style="color:#0F6E56;">SOLD OUT</div>
   </div>
   <div class="metric">
-    <div class="metric-label">Days to opening</div>
-    <div class="metric-value">3</div>
+    <div class="metric-label">Total oversold</div>
+    <div class="metric-value">31 <span>tickets</span></div>
   </div>
   <div class="metric">
     <div class="metric-label">VIP total</div>
@@ -70,7 +70,7 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
   <div class="legend">
     <span class="legend-item"><span class="legend-dot" style="background:#3266ad"></span>GA sold</span>
     <span class="legend-item"><span class="legend-dot" style="background:#85B7EB"></span>VIP sold</span>
-    <span class="legend-item"><span class="legend-dot" style="background:#e8e6e0"></span>Remaining</span>
+    <span class="legend-item"><span class="legend-dot" style="background:transparent;border:1.5px dashed #E24B4A;width:8px;height:8px"></span>Capacity (137)</span>
   </div>
   <div class="chart-container"><canvas id="salesChart"></canvas></div>
 </div>
@@ -85,43 +85,43 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
     <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 10 (Opening)</p>
-    <p class="card-pct" style="color:#fff;">100%</p>
-    <p class="card-detail" style="color:rgba(255,255,255,0.7);">142 sold (oversold by 2)</p>
+    <p class="card-pct" style="color:#fff;">142 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 5</p>
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 30</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
     <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 11</p>
-    <p class="card-pct" style="color:#fff;">100%</p>
-    <p class="card-detail" style="color:rgba(255,255,255,0.7);">142 sold (oversold by 2)</p>
+    <p class="card-pct" style="color:#fff;">140 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 3</p>
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 31</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
     <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 12</p>
-    <p class="card-pct" style="color:#fff;">100%</p>
-    <p class="card-detail" style="color:rgba(255,255,255,0.7);">140 sold</p>
-    <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 24</p>
+    <p class="card-pct" style="color:#fff;">141 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 4</p>
+    <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 22</p>
   </div>
-  <div class="card card-strong">
-    <span class="card-change change-up">+92</span>
-    <p class="card-date">Apr 16</p>
-    <p class="card-pct">88.6%</p>
-    <p class="card-detail">124 sold, 16 remaining</p>
-    <p class="card-vip">VIP: 17</p>
+  <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
+    <span class="card-change" style="background:#FAECE7;color:#993C1D;">+9 over</span>
+    <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 16</p>
+    <p class="card-pct" style="color:#fff;">146 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 9 (highest of the run)</p>
+    <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 19</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
     <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 17</p>
-    <p class="card-pct" style="color:#fff;">100%</p>
-    <p class="card-detail" style="color:rgba(255,255,255,0.7);">141 sold (oversold by 1)</p>
+    <p class="card-pct" style="color:#fff;">142 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 5</p>
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 30</p>
   </div>
   <div class="card" style="background:#0F6E56;border-color:#0F6E56;">
     <span class="card-change" style="background:rgba(255,255,255,0.2);color:#fff;">SOLD OUT</span>
     <p class="card-date" style="color:rgba(255,255,255,0.7);">Apr 18 (Closing)</p>
-    <p class="card-pct" style="color:#fff;">100%</p>
-    <p class="card-detail" style="color:rgba(255,255,255,0.7);">142 sold (oversold by 2)</p>
+    <p class="card-pct" style="color:#fff;">142 tickets</p>
+    <p class="card-detail" style="color:#FAECE7;">Oversold by 5</p>
     <p class="card-vip" style="color:rgba(255,255,255,0.8);">VIP: 37</p>
   </div>
 </div>
@@ -134,11 +134,12 @@ h1{font-family:'Fraunces',serif;font-size:1.75rem;font-weight:700;color:#1a1a18;
 <p class="footer">Friends of George's — Mister Act Campaign — Prepared by New Urban Media</p>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js"></script>
 <script>
 const labels = ['Apr 10','Apr 11','Apr 12','Apr 16','Apr 17','Apr 18'];
-const gaSold = [112, 111, 116, 107, 111, 105];
-const vipSold = [30, 31, 24, 17, 30, 37];
-const remaining = [0, 0, 0, 16, 0, 0];
+const gaSold = [112, 109, 119, 127, 112, 105];
+const vipSold = [30, 31, 22, 19, 30, 37];
+const remaining = [0, 0, 0, 0, 0, 0];
 const gridColor = 'rgba(0,0,0,0.04)';
 const textColor = '#888780';
 
@@ -148,8 +149,7 @@ new Chart(document.getElementById('salesChart'), {
     labels,
     datasets: [
       {label:'GA sold',data:gaSold,backgroundColor:'#3266ad',borderRadius:3},
-      {label:'VIP sold',data:vipSold,backgroundColor:'#85B7EB',borderRadius:3},
-      {label:'Remaining',data:remaining,backgroundColor:'#e8e6e0',borderRadius:3}
+      {label:'VIP sold',data:vipSold,backgroundColor:'#85B7EB',borderRadius:3}
     ]
   },
   options: {
@@ -161,14 +161,25 @@ new Chart(document.getElementById('salesChart'), {
           afterBody:function(ctx){
             const i=ctx[0].dataIndex;
             const total=gaSold[i]+vipSold[i];
-            return 'Total sold: '+total+' of 140 ('+Math.round(total/140*100)+'%)';
+            const over=total-137;
+            return 'Total sold: '+total+' (oversold by '+over+')';
+          }
+        }
+      },
+      annotation:{
+        annotations:{
+          capacityLine:{
+            type:'line',
+            yMin:137,yMax:137,
+            borderColor:'#E24B4A',borderWidth:1.5,borderDash:[4,3],
+            label:{display:true,content:'Capacity (137)',position:'start',font:{size:10},color:'#A32D2D',backgroundColor:'transparent'}
           }
         }
       }
     },
     scales:{
       x:{stacked:true,grid:{display:false},ticks:{color:textColor,font:{size:12,family:'DM Sans'}}},
-      y:{stacked:true,max:140,grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'Tickets',color:textColor,font:{size:11,family:'DM Sans'}}}
+      y:{stacked:true,max:150,grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'Tickets',color:textColor,font:{size:11,family:'DM Sans'}}}
     }
   }
 });
@@ -193,15 +204,16 @@ const apr03=[140,141,123,87,141,140];
 const apr04=[142,142,127,98,141,142];
 const apr06=[142,142,140,113,141,142];
 const apr07=[142,142,140,124,141,142];
+const apr13=[142,140,141,146,142,142];
 const lineColors=['#3266ad','#0F6E56','#85B7EB','#E24B4A','#BA7517','#534AB7'];
 
 new Chart(document.getElementById('velocityChart'), {
   type:'line',
   data:{
-    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26','Mar 27','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3','Apr 4','Apr 6','Apr 7'],
+    labels:['Mar 11','Mar 16','Mar 18','Mar 20','Mar 21','Mar 22','Mar 23','Mar 24','Mar 25','Mar 26','Mar 27','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3','Apr 4','Apr 6','Apr 7','Apr 13'],
     datasets: labels.map((l,i)=>({
       label:l,
-      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i],mar27[i],mar29[i],mar30[i],mar31[i],apr01[i],apr02[i],apr03[i],apr04[i],apr06[i],apr07[i]],
+      data:[mar11[i],mar16[i],mar18[i],mar20[i],mar21[i],mar22[i],mar23[i],mar24[i],mar25[i],mar26[i],mar27[i],mar29[i],mar30[i],mar31[i],apr01[i],apr02[i],apr03[i],apr04[i],apr06[i],apr07[i],apr13[i]],
       borderColor:lineColors[i],
       backgroundColor:lineColors[i],
       pointRadius:5,
@@ -218,7 +230,7 @@ new Chart(document.getElementById('velocityChart'), {
     },
     scales:{
       x:{grid:{display:false},ticks:{color:textColor,font:{size:12,family:'DM Sans'}}},
-      y:{max:140,grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'Tickets sold',color:textColor,font:{size:11,family:'DM Sans'}}}
+      y:{max:150,grid:{color:gridColor},ticks:{color:textColor,font:{size:11,family:'DM Sans'}},title:{display:true,text:'Tickets sold',color:textColor,font:{size:11,family:'DM Sans'}}}
     }
   }
 });
